@@ -7,7 +7,7 @@ import os
 import gdown
 
 # 🔁 Télécharger le modèle depuis Google Drive
-MODEL_URL = "https://drive.google.com/file/d/1FvddbOX0gGcZV7BPxLPjZsiNQi9o3H9d/view?usp=sharing"
+MODEL_URL = "https://drive.google.com/uc?id=1FvddbOX0gGcZV7BPxLPjZsiNQi9o3H9d"
 MODEL_PATH = "pneumonia_detector_model.h5"
 
 if not os.path.exists(MODEL_PATH):
@@ -29,10 +29,10 @@ if uploaded_file is not None:
     img_array = image.img_to_array(img) / 255.0
     img_array = np.expand_dims(img_array, axis=0)
 
-   prediction = float(model.predict(img_array, verbose=0)[0])
+    prediction = float(model.predict(img_array, verbose=0)[0])
 
     if prediction > 0.5:
         st.error(f"🟥 Pneumonia detected with confidence {prediction:.2f}")
     else:
         st.success(f"🟩 Normal with confidence {1 - prediction:.2f}")
-        #Correction de la prédiction et mise à jour de l'image
+
