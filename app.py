@@ -7,7 +7,7 @@ import os
 import gdown
 
 # 🔁 Télécharger le modèle depuis Google Drive
-MODEL_URL = "https://drive.google.com/uc?id=1t1pGYE7PZXl6o0--p8xenRlA_uY-GG80"
+MODEL_URL = "https://drive.google.com/file/d/1FvddbOX0gGcZV7BPxLPjZsiNQi9o3H9d/view?usp=sharing"
 MODEL_PATH = "pneumonia_detector_model.h5"
 
 if not os.path.exists(MODEL_PATH):
