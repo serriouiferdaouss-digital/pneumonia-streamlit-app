@@ -29,7 +29,7 @@ if uploaded_file is not None:
     img_array = image.img_to_array(img) / 255.0
     img_array = np.expand_dims(img_array, axis=0)
 
-    prediction = float(model.predict(img_array, verbose=0)[0])
+   prediction = float(model.predict(img_array, verbose=0)[0])
 
     if prediction > 0.5:
         st.error(f"🟥 Pneumonia detected with confidence {prediction:.2f}")
